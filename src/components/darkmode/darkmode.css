@@ -1,0 +1,8 @@
+.darkmode {
+  height: 50px;
+  padding-left: 64px;
+}
+
+.darkmode__toggle {
+  height: 100%;
+}

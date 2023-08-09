@@ -1,0 +1,126 @@
+.landing {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.landing__content {
+  font-size: 22px;
+  line-height: 1.7;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: var(--spacing-xl);
+}
+
+.landing-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.landing-background img {
+  object-fit: cover;
+  bottom: 0;
+  right: 0;
+  height: 70%;
+  mix-blend-mode: var(--blend-mode);
+  opacity: 0.6;
+}
+
+.landing__content a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.landing__content a:hover {
+  transition: all 0.5s ease-in-out;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.highlighted {
+  color: var(--primary);
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.skill {
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--text);
+  animation: pulse 5s infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+.skill:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.skill:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.skill:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.skill:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.skill:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.skill:nth-child(6) {
+  animation-delay: 5s;
+}
+
+@keyframes pulse {
+  0% {
+    color: var(--text);
+  }
+  20% {
+    color: var(--accent);
+  }
+  40% {
+    color: var(--text);
+  }
+}
+
+@media (max-width: 768px) {
+  .landing__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-background img {
+    right: auto;
+    height: 300px;
+    max-width: 100%;
+  }
+
+  .landing-background {
+    flex-grow: 1;
+  }
+
+  .landing__content,
+  .highlighted,
+  .skill {
+    font-size: 11px;
+  }
+
+  .landing__content {
+    margin-top: var(--spacing-m);
+    position: relative;
+    margin-left: var(--spacing-half);
+  }
+}
