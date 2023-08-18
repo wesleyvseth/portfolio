@@ -1,23 +1,9 @@
 import "./landing.css";
-import LineAnimations from "../line-animations/line-animations";
 import Navigation from "../navigation/navigation";
 import Portret from "../../assets/portret.png";
+import Skills from "../skills/skills";
 
 const Landing = () => {
-  const codeString = `
-    const developer = {
-      name: "Wesley van Straalen",
-      role: "Front-end Developer",
-      location: "Amersfoort, The Netherlands",
-      skills: ["HTML", "CSS", "JavaScript", "React", "..."],
-      contact: {
-        github: "https://github.com/wesleyvseth",
-        linkedin: "https://linkedin.com/in/yourusername",
-        twitter: "https://twitter.com/wesleyvs_eth",
-        email: "wesleyvanstr@outlook.com",
-      }
-    }`;
-
   return (
     <div className="landing">
       <Navigation />
@@ -35,13 +21,6 @@ const Landing = () => {
               {'  location: "Amersfoort, The Netherlands",'}
               <br />
               {"  skills:"} <span className="highlighted">{"["}</span>
-              <div className="skillset">
-                <span className="skill"> {"   HTML"}</span>,<span className="skill"> "CSS"</span>,
-                <span className="skill"> "Javascript"</span>,<span className="skill"> "React"</span>,
-                <span className="skill"> "Angular"</span>
-                <br />
-                <span className="highlighted">{"  ],"}</span>
-              </div>
               {"  contact:"} <span className="highlighted">{" {"}</span>
               <br />
               {"    github: "}
@@ -85,9 +64,11 @@ const Landing = () => {
 
         <div className="landing-background">
           <img
+            className="landing-image"
             src={Portret}
             alt="background"
           />
+          <Skills />
         </div>
       </div>
     </div>

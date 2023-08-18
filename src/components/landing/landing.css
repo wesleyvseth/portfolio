@@ -26,13 +26,14 @@
   justify-content: flex-end;
 }
 
-.landing-background img {
+.landing-image {
   object-fit: cover;
   bottom: 0;
   right: 0;
   height: 70%;
   mix-blend-mode: var(--blend-mode);
-  opacity: 0.6;
+  opacity: 0.8;
+  z-index: 9999;
 }
 
 .landing__content a {
@@ -96,7 +97,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .landing__wrapper {
     flex-direction: column;
     align-items: center;
@@ -104,8 +105,11 @@
 
   .landing-background img {
     right: auto;
-    height: 300px;
     max-width: 100%;
+  }
+
+  .landing-image {
+    height: 100%;
   }
 
   .landing-background {

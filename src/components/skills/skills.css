@@ -1,0 +1,100 @@
+.skills-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  width: 400px;
+  top: 50%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  transform: translate(50%, -50%);
+}
+
+.skills-wrap img {
+  height: 40px;
+  object-fit: cover;
+  animation: animateUp 15s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.6;
+  z-index: -1;
+  mix-blend-mode: var(--blend-mode);
+  opacity: 0;
+}
+
+.skills-wrap img:nth-child(2) {
+  animation-delay: 11s;
+}
+
+.skills-wrap img:nth-child(3) {
+  animation-delay: 7s;
+}
+
+.skills-wrap img:nth-child(4) {
+  animation-delay: 4s;
+}
+
+.skills-wrap img:nth-child(5) {
+  animation-delay: 9s;
+}
+
+.skills-wrap img:nth-child(6) {
+  animation-delay: 3s;
+}
+
+.skills-wrap img:nth-child(7) {
+  animation-delay: 8s;
+}
+
+.skills-wrap img:nth-child(8) {
+  animation-delay: 5s;
+}
+
+.skills-wrap img:nth-child(9) {
+  animation-delay: 13s;
+}
+
+.skills-wrap img:nth-child(10) {
+  animation-delay: 2s;
+}
+
+.skills-wrap img:nth-child(11) {
+  animation-delay: 4s;
+}
+
+.skills-wrap img:nth-child(12) {
+  animation-delay: 10s;
+}
+
+.skills-wrap img:nth-child(13) {
+  animation-delay: 13s;
+}
+
+@media (max-width: 768px) {
+  .skills-wrap {
+    width: 100%;
+    transform: translate(0, -50%);
+    bottom: 0;
+    top: auto;
+  }
+
+  .skills-wrap img {
+    height: 30px;
+  }
+}
+
+@keyframes animateUp {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+}
