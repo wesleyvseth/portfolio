@@ -10,13 +10,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-xl);
-}
-
-.navigation__items a:hover {
-  color: var(--primary);
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
 }
 
 .wvs {
