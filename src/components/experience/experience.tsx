@@ -24,7 +24,14 @@ const Experience = () => {
       endDate: "Present",
       description:
         "At Ilionx I get to work for multiple different Companies. Find some of these companies in this experience list. While not having a project I get to work on my own skills and knowledge. This includes learning new technologies, creating a new project and doing courses.",
-      technologies: ["Angular", "React", "TypeScript", "JavaScript", "HTML", "SCSS"],
+      technologies: [
+        "/angular-logo.png",
+        "/react-logo.png",
+        "/typescript-logo.png",
+        "/javascript-logo.png",
+        "/html-logo.png",
+        "/sass-logo.png",
+      ],
       logo: "/logo-ilionx.png",
       url: "https://www.ilionx.com/",
     },
@@ -35,7 +42,7 @@ const Experience = () => {
       endDate: "07-2023",
       description:
         "At De Nieuwe Zaak I mainly worked on e-commerce webshops. They worked with BigCommerce and made custom themes for their clients. This included mini React applications and javascript.",
-      technologies: ["React", "Redux", "HTML5", "JQuery", "HTML", "SCSS"],
+      technologies: ["/react-logo.png", "/redux-logo.png", "/javascript-logo.png", "/html-logo.png", "/sass-logo.png"],
       logo: "/logo-dnz.png",
       url: "https://www.denieuwezaak.nl/",
     },
@@ -46,7 +53,7 @@ const Experience = () => {
       endDate: "12-2022",
       description:
         "At Rentman I've worked on multiple functionalities within a stand-alone SCRUM team. This includes development of new features, refactoring of old code from AngularJS to Angular 14, reviewing team members code, analyzing and fixing bugs and guide interns.",
-      technologies: ["Angular14", "AngularJS", "TypeScript", "HTML5", "SCSS"],
+      technologies: ["/angular-logo.png", "/typescript-logo.png", "/html-logo.png", "/sass-logo.png"],
       logo: "/rentman-logo.svg",
       url: "https://rentman.io/",
     },
@@ -57,7 +64,7 @@ const Experience = () => {
       endDate: "02-2020",
       description:
         "This was an internship where we've worked on a app related to the pharma industry. It was focussed on iPad development with VueJS. Mainly worked on refactoring some frontend code.",
-      technologies: ["VueJS", "HTML5", "CSS"],
+      technologies: ["/vue-logo.png", "/html-logo.png", "/css-logo.png"],
       logo: "/logo-trueson.png",
       url: "https://trueson.com/",
     },
@@ -68,7 +75,7 @@ const Experience = () => {
       endDate: "03-2017",
       description:
         "The internship at Oxygen Digital allowed me to use some creativity to come up with solutions for their clients. I've worked on multiple projects and used multiple technologies. They also allowed me to make up features myself and then develop them.",
-      technologies: ["VueJS", "JQuery", "NodeJS", "MongoDB", "HTML", "CSS"],
+      technologies: ["/vue-logo.png", "/javascript-logo.png", "/nodejs-logo.png", "/html-logo.png", "/css-logo.png"],
       logo: "logo-oxygen.png",
       url: "https://oxygendigital.nl/",
     },
@@ -101,7 +108,7 @@ const Experience = () => {
   return (
     <div className="experience-wrap">
       <h1>Experience</h1>
-      <ul>
+      <ul className="experience__list">
         {experiences.map((experience, index) => {
           return (
             <li
@@ -121,9 +128,14 @@ const Experience = () => {
               </div>
               <div className="descr">{experience.description}</div>
               <div className="tech">
-                {experience.technologies.map((tech, index) => {
-                  return <span key={index}>{tech} </span>;
-                })}
+                {experience.technologies.map((tech, index) => (
+                  <img
+                    key={index}
+                    src={tech}
+                    className="tech__logo"
+                    alt="Tech logo"
+                  />
+                ))}
               </div>
               <div className="url">
                 <a

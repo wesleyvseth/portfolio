@@ -20,7 +20,6 @@ const Landing = () => {
               <br />
               {'  location: "Amersfoort, The Netherlands",'}
               <br />
-              {"  skills:"} <span className="highlighted">{"["}</span>
               {"  contact:"} <span className="highlighted">{" {"}</span>
               <br />
               {"    github: "}

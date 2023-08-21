@@ -7,7 +7,7 @@ h1 {
   text-align: center;
 }
 
-ul {
+.experience__list {
   margin: var(--spacing-lg) 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,7 +24,7 @@ ul {
 }
 
 /* line */
-ul::before {
+.experience__list::before {
   content: "";
   grid-column: 1;
   grid-row: 1 / span 20;
@@ -35,12 +35,12 @@ ul::before {
 /* columns*/
 
 /* row gaps */
-ul li:not(:last-child) {
+.experience__list .experience-item:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
 /* card */
-ul li {
+.experience-item {
   grid-column: 2;
   --inlineP: 1.5rem;
   margin-inline: var(--inlineP);
@@ -51,7 +51,7 @@ ul li {
 }
 
 /* date */
-ul li .date {
+.experience__list li .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
@@ -71,7 +71,7 @@ ul li .date {
 }
 
 /* date flap */
-ul li .date::before {
+.experience__list li .date::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
@@ -84,13 +84,13 @@ ul li .date::before {
 }
 
 /* title descr */
-ul li .title,
-ul li .descr {
+.experience__list li .title,
+.experience__list li .descr {
   position: relative;
   padding-inline: 1.5rem;
 }
 
-ul li .title {
+.experience__list li .title {
   color: var(--accent);
   overflow: hidden;
   padding-block-start: 1.5rem;
@@ -106,7 +106,7 @@ ul li .title {
   width: 40px;
 }
 
-ul li .descr {
+.experience__list li .descr {
   padding-block-end: 1.5rem;
   font-weight: 300;
 }
@@ -125,6 +125,9 @@ ul li .descr {
 }
 
 .tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
   padding-block-end: 1rem;
   padding-left: 1.5rem;
 }
@@ -135,40 +138,44 @@ ul li .descr {
   transition: opacity 1s, transform 1s;
 }
 
+.tech__logo {
+  height: 30px;
+}
+
 .experience-item.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (min-width: 40rem) {
-  ul {
+  .experience__list {
     grid-template-columns: 1fr var(--line-w) 1fr;
   }
-  ul::before {
+  .experience__list::before {
     grid-column: 2;
   }
-  ul li:nth-child(odd) {
+  .experience__list li:nth-child(odd) {
     grid-column: 1;
   }
-  ul li:nth-child(even) {
+  .experience__list li:nth-child(even) {
     grid-column: 3;
   }
 
   /* start second card */
-  ul li:nth-child(2) {
+  .experience__list li:nth-child(2) {
     grid-row: 2/4;
   }
 
-  ul li:nth-child(odd) .date::before {
+  .experience__list li:nth-child(odd) .date::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     left: 0;
   }
 
-  ul li:nth-child(odd) .date::after {
+  .experience__list li:nth-child(odd) .date::after {
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
-  ul li:nth-child(odd) .date {
+  .experience__list li:nth-child(odd) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
