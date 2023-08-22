@@ -56,6 +56,15 @@ const Projects = () => {
       previewImageUrl: "/bettercx-layer.png",
     },
     {
+      name: "Angular Signals",
+      description: "Simple todos project course to play with newly released Angular Signals",
+      technologies: ["/angular-logo.png", "/html-logo.png", "/css-logo.png"],
+      github: "https://github.com/wesleyvseth/signals",
+      imageUrl: "/jbook.png",
+      logo: "/ctseer-logo.png",
+      previewImageUrl: "/signals-layer.png",
+    },
+    {
       name: "Portfolio",
       description: "The website you're currently on! A simple portfolio project to showcase my resume and projects in a different way. ",
       technologies: ["/react-logo.png", "/html-logo.png", "/css-logo.png"],
